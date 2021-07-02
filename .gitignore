@@ -33,3 +33,6 @@ CMakeCache.txt
 CMakeFiles/*
 .project
 ./codebuild/spec/buildspec_*_batch.yml
+
+# Ignore CMake build directory.
+build/

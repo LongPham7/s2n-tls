@@ -1,0 +1,591 @@
+Reading GOTO program from 'gotos/s2n_stuffer_pem_read_contracts_harness.c.goto'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__CPROVER__start /* __CPROVER__start */
+        // 253 no location
+        // Labels: __CPROVER_HIDE
+        __CPROVER_initialize();
+        // 254 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 26
+        s2n_stuffer_pem_read_contracts_harness();
+        // 255 no location
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__CPROVER_initialize /* __CPROVER_initialize */
+        // 42 file <built-in-additions> line 20
+        // Labels: __CPROVER_HIDE
+        __CPROVER_alloca_object = NULL;
+        // 43 file <built-in-additions> line 14
+        __CPROVER_dead_object = NULL;
+        // 44 file <built-in-additions> line 13
+        __CPROVER_deallocated = NULL;
+        // 45 file <built-in-additions> line 23
+        __CPROVER_malloc_failure_mode_assert_then_assume = 2;
+        // 46 file <built-in-additions> line 22
+        __CPROVER_malloc_failure_mode_return_null = 1;
+        // 47 file <built-in-additions> line 17
+        __CPROVER_malloc_is_new_array = 0 != 0;
+        // 48 file <built-in-additions> line 15
+        __CPROVER_malloc_object = NULL;
+        // 49 file <built-in-additions> line 16
+        __CPROVER_malloc_size = 0ul;
+        // 50 file <built-in-additions> line 24
+        __CPROVER_max_malloc_size = (__CPROVER_size_t)36028797018963968l;
+        // 51 file <built-in-additions> line 18
+        __CPROVER_memory_leak = NULL;
+        // 52 file <built-in-additions> line 8
+        __CPROVER_next_thread_id = (unsigned long int)0;
+        // 53 file <built-in-additions> line 11
+        __CPROVER_next_thread_key = (unsigned long int)0;
+        // 54 file <built-in-additions> line 38
+        __CPROVER_pipe_count = (unsigned int)0;
+        // 55 file <built-in-additions> line 29
+        __CPROVER_rounding_mode = 0;
+        // 56 file <built-in-additions> line 6
+        __CPROVER_thread_id = (unsigned long int)0;
+        // 57 file <built-in-additions> line 10
+        __CPROVER_thread_key_dtors = ARRAY_OF(((void (*)(void *))NULL));
+        // 58 file <built-in-additions> line 9
+        __CPROVER_thread_keys = ARRAY_OF(NULL);
+        // 59 file <built-in-additions> line 7
+        __CPROVER_threads_exited = ARRAY_OF(FALSE);
+        // 60 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 32
+        s2n_debug_str = ((const char *)NULL);
+        // 61 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 31
+        s2n_errno = 0;
+        // 62 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 352
+        s_s2n_stack_traces_enabled = (_Bool)0;
+        // 63 no location
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cbmc_allocate_s2n_stuffer /* cbmc_allocate_s2n_stuffer */
+        // 33 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 50 function cbmc_allocate_s2n_stuffer
+        struct s2n_stuffer *stuffer;
+        // 34 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 50 function cbmc_allocate_s2n_stuffer
+        void *return_value_malloc;
+        // 35 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 50 function cbmc_allocate_s2n_stuffer
+        return_value_malloc=malloc(sizeof(struct s2n_stuffer) /*40ul*/ );
+        // 36 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 50 function cbmc_allocate_s2n_stuffer
+        stuffer = (struct s2n_stuffer *)return_value_malloc;
+        // 37 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 51 function cbmc_allocate_s2n_stuffer
+        cbmc_populate_s2n_stuffer(stuffer);
+        // 38 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 52 function cbmc_allocate_s2n_stuffer
+        return stuffer;
+        // 39 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 52 function cbmc_allocate_s2n_stuffer
+        dead stuffer;
+        // 40 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 52 function cbmc_allocate_s2n_stuffer
+        dead return_value_malloc;
+        // 41 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 53 function cbmc_allocate_s2n_stuffer
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cbmc_populate_s2n_blob /* cbmc_populate_s2n_blob */
+        // 64 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 27 function cbmc_populate_s2n_blob
+     1: IF !(blob != ((struct s2n_blob *)NULL)) THEN GOTO 7
+        // 65 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 27 function cbmc_populate_s2n_blob
+        IF 0 != 0 THEN GOTO 1
+        // 66 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 28 function cbmc_populate_s2n_blob
+        IF !(blob->growable != 0u) THEN GOTO 4
+        // 67 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        void *tmp_if_expr;
+        // 68 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        IF !(blob->allocated == (unsigned int)0) THEN GOTO 2
+        // 69 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        tmp_if_expr = (void *)0;
+        // 70 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        GOTO 3
+        // 71 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+     2: void *return_value_malloc;
+        // 72 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        return_value_malloc=malloc((size_t)blob->allocated);
+        // 73 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+        tmp_if_expr = return_value_malloc;
+        // 74 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 29 function cbmc_populate_s2n_blob
+     3: blob->data = (uint8_t *)tmp_if_expr;
+        // 75 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 30 function cbmc_populate_s2n_blob
+        dead tmp_if_expr;
+        // 76 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 30 function cbmc_populate_s2n_blob
+        dead return_value_malloc;
+        // 77 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 30 function cbmc_populate_s2n_blob
+        GOTO 7
+        // 78 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+     4: void *tmp_if_expr$0;
+        // 79 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+        IF !(blob->size == (unsigned int)0) THEN GOTO 5
+        // 80 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+        tmp_if_expr$0 = (void *)0;
+        // 81 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+        GOTO 6
+        // 82 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+     5: void *return_value_malloc$0;
+        // 83 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+        return_value_malloc$0=malloc((size_t)blob->size);
+        // 84 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+        tmp_if_expr$0 = return_value_malloc$0;
+        // 85 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 31 function cbmc_populate_s2n_blob
+     6: blob->data = (uint8_t *)tmp_if_expr$0;
+        // 86 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 32 function cbmc_populate_s2n_blob
+        dead tmp_if_expr$0;
+        // 87 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 32 function cbmc_populate_s2n_blob
+        dead return_value_malloc$0;
+        // 88 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 33 function cbmc_populate_s2n_blob
+     7: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cbmc_populate_s2n_stuffer /* cbmc_populate_s2n_stuffer */
+        // 270 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 44 function cbmc_populate_s2n_stuffer
+     1: IF !(stuffer != ((struct s2n_stuffer *)NULL)) THEN GOTO 2
+        // 271 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 44 function cbmc_populate_s2n_stuffer
+        IF 0 != 0 THEN GOTO 1
+        // 272 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 45 function cbmc_populate_s2n_stuffer
+        cbmc_populate_s2n_blob(&stuffer->blob);
+        // 273 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/sources/make_common_datastructures.c line 46 function cbmc_populate_s2n_stuffer
+     2: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+s2n_blob_validate /* s2n_blob_validate */
+        // 89 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+     1: IF b != ((const struct s2n_blob *)NULL) THEN GOTO 3
+        // 90 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+     2: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29";
+        // 91 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        s2n_errno = 402653193;
+        // 92 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 93 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 2
+        // 94 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 95 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        GOTO 34
+        // 96 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 2
+        // 97 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 29 function s2n_blob_validate
+     3: IF 0 != 0 THEN GOTO 1
+        // 98 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+     4: __CPROVER_bool tmp_if_expr;
+        // 99 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        IF b->data == ((uint8_t *)NULL) THEN GOTO 5
+        // 100 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        tmp_if_expr = TRUE;
+        // 101 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        GOTO 6
+        // 102 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+     5: tmp_if_expr = b->size == (unsigned int)0 ? TRUE : FALSE;
+        // 103 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+     6: IF !((signed long int)(signed long int)!(!(!tmp_if_expr)) != 0l) THEN GOTO 8
+        // 104 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+     7: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30";
+        // 105 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 106 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 107 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 7
+        // 108 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 109 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        GOTO 34
+        // 110 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 7
+        // 111 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+     8: dead tmp_if_expr;
+        // 112 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 30 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 4
+        // 113 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+     9: __CPROVER_bool tmp_if_expr$0;
+        // 114 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        IF b->data == ((uint8_t *)NULL) THEN GOTO 10
+        // 115 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        tmp_if_expr$0 = TRUE;
+        // 116 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        GOTO 11
+        // 117 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+    10: tmp_if_expr$0 = b->allocated == (unsigned int)0 ? TRUE : FALSE;
+        // 118 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+    11: IF !((signed long int)(signed long int)!(!(!tmp_if_expr$0)) != 0l) THEN GOTO 13
+        // 119 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+    12: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31";
+        // 120 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 121 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 122 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 12
+        // 123 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 124 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        GOTO 34
+        // 125 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 12
+        // 126 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+    13: dead tmp_if_expr$0;
+        // 127 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 31 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 9
+        // 128 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+    14: __CPROVER_bool tmp_if_expr$1;
+        // 129 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        IF (signed int)b->growable == 0 THEN GOTO 15
+        // 130 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        tmp_if_expr$1 = TRUE;
+        // 131 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        GOTO 16
+        // 132 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+    15: tmp_if_expr$1 = b->allocated == (unsigned int)0 ? TRUE : FALSE;
+        // 133 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+    16: IF !((signed long int)(signed long int)!(!(!tmp_if_expr$1)) != 0l) THEN GOTO 18
+        // 134 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+    17: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32";
+        // 135 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 136 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 137 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 17
+        // 138 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 139 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        GOTO 34
+        // 140 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 17
+        // 141 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+    18: dead tmp_if_expr$1;
+        // 142 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 32 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 14
+        // 143 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+    19: __CPROVER_bool tmp_if_expr$2;
+        // 144 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        IF (signed int)b->growable != 0 THEN GOTO 20
+        // 145 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        tmp_if_expr$2 = TRUE;
+        // 146 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        GOTO 21
+        // 147 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+    20: tmp_if_expr$2 = b->size <= b->allocated ? TRUE : FALSE;
+        // 148 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+    21: IF !((signed long int)(signed long int)!(!(!tmp_if_expr$2)) != 0l) THEN GOTO 23
+        // 149 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+    22: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33";
+        // 150 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 151 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 152 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 22
+        // 153 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 154 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        GOTO 34
+        // 155 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 22
+        // 156 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+    23: dead tmp_if_expr$2;
+        // 157 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 33 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 19
+        // 158 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+    24: __CPROVER_bool tmp_if_expr$3;
+        // 159 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        IF !(b->allocated == (unsigned int)0) THEN GOTO 25
+        // 160 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        tmp_if_expr$3 = TRUE;
+        // 161 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        GOTO 26
+        // 162 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+    25: tmp_if_expr$3 = b->data != ((uint8_t *)NULL) ? TRUE : FALSE;
+        // 163 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+    26: IF !((signed long int)(signed long int)!(!(!tmp_if_expr$3)) != 0l) THEN GOTO 28
+        // 164 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+    27: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34";
+        // 165 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 166 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 167 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 27
+        // 168 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 169 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        GOTO 34
+        // 170 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 27
+        // 171 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+    28: dead tmp_if_expr$3;
+        // 172 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 34 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 24
+        // 173 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+    29: __CPROVER_bool tmp_if_expr$4;
+        // 174 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        IF !(b->size == (unsigned int)0) THEN GOTO 30
+        // 175 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        tmp_if_expr$4 = TRUE;
+        // 176 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        GOTO 31
+        // 177 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+    30: tmp_if_expr$4 = b->data != ((uint8_t *)NULL) ? TRUE : FALSE;
+        // 178 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+    31: IF !((signed long int)(signed long int)!(!(!tmp_if_expr$4)) != 0l) THEN GOTO 33
+        // 179 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+    32: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35";
+        // 180 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        s2n_errno = 402653194;
+        // 181 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        s2n_calculate_stacktrace();
+        // 182 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 32
+        // 183 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        return { .__error_signal=-1 };
+        // 184 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        GOTO 34
+        // 185 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 32
+        // 186 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+    33: dead tmp_if_expr$4;
+        // 187 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 35 function s2n_blob_validate
+        IF 0 != 0 THEN GOTO 29
+        // 188 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 36 function s2n_blob_validate
+        return { .__error_signal=0 };
+        // 189 file /local/home/lopha/Repos/s2n-tls/utils/s2n_blob.c line 37 function s2n_blob_validate
+    34: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+s2n_calculate_stacktrace /* s2n_calculate_stacktrace */
+        // 258 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 424 function s2n_calculate_stacktrace
+        IF s_s2n_stack_traces_enabled != FALSE THEN GOTO 1
+        // 259 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 426 function s2n_calculate_stacktrace
+        return 0;
+        // 260 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 426 function s2n_calculate_stacktrace
+        GOTO 2
+        // 261 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+     1: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429";
+        // 262 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        s2n_errno = 402653229;
+        // 263 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        s2n_calculate_stacktrace();
+        // 264 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        IF 0 != 0 THEN GOTO 1
+        // 265 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        return -1;
+        // 266 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        GOTO 2
+        // 267 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 429 function s2n_calculate_stacktrace
+        IF 0 != 0 THEN GOTO 1
+        // 268 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 430 function s2n_calculate_stacktrace
+        return NONDET(signed int);
+        // 269 file /local/home/lopha/Repos/s2n-tls/error/s2n_errno.c line 430 function s2n_calculate_stacktrace
+     2: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+s2n_result_is_ok /* s2n_result_is_ok */
+        // 256 file /local/home/lopha/Repos/s2n-tls/utils/s2n_result.c line 86 function s2n_result_is_ok
+        return result.__error_signal == 0;
+        // 257 file /local/home/lopha/Repos/s2n-tls/utils/s2n_result.c line 87 function s2n_result_is_ok
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+s2n_stuffer_pem_read_contracts_harness /* s2n_stuffer_pem_read_contracts_harness */
+        // 0 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 28 function s2n_stuffer_pem_read_contracts_harness
+        struct s2n_stuffer *pem;
+        // 1 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 28 function s2n_stuffer_pem_read_contracts_harness
+        struct s2n_stuffer *return_value_cbmc_allocate_s2n_stuffer;
+        // 2 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 28 function s2n_stuffer_pem_read_contracts_harness
+        return_value_cbmc_allocate_s2n_stuffer=cbmc_allocate_s2n_stuffer();
+        // 3 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 28 function s2n_stuffer_pem_read_contracts_harness
+        pem = return_value_cbmc_allocate_s2n_stuffer;
+        // 4 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 29 function s2n_stuffer_pem_read_contracts_harness
+        s2n_result return_value_s2n_stuffer_validate;
+        // 5 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 29 function s2n_stuffer_pem_read_contracts_harness
+        return_value_s2n_stuffer_validate=s2n_stuffer_validate(pem);
+        // 6 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 29 function s2n_stuffer_pem_read_contracts_harness
+        _Bool return_value_s2n_result_is_ok;
+        // 7 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 29 function s2n_stuffer_pem_read_contracts_harness
+        return_value_s2n_result_is_ok=s2n_result_is_ok(return_value_s2n_stuffer_validate);
+        // 8 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 29 function s2n_stuffer_pem_read_contracts_harness
+        ASSUME return_value_s2n_result_is_ok != FALSE
+        // 9 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 31 function s2n_stuffer_pem_read_contracts_harness
+        struct s2n_stuffer *asn1;
+        // 10 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 31 function s2n_stuffer_pem_read_contracts_harness
+        struct s2n_stuffer *return_value_cbmc_allocate_s2n_stuffer$0;
+        // 11 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 31 function s2n_stuffer_pem_read_contracts_harness
+        return_value_cbmc_allocate_s2n_stuffer$0=cbmc_allocate_s2n_stuffer();
+        // 12 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 31 function s2n_stuffer_pem_read_contracts_harness
+        asn1 = return_value_cbmc_allocate_s2n_stuffer$0;
+        // 13 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 32 function s2n_stuffer_pem_read_contracts_harness
+        s2n_result return_value_s2n_stuffer_validate$0;
+        // 14 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 32 function s2n_stuffer_pem_read_contracts_harness
+        return_value_s2n_stuffer_validate$0=s2n_stuffer_validate(asn1);
+        // 15 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 32 function s2n_stuffer_pem_read_contracts_harness
+        _Bool return_value_s2n_result_is_ok$0;
+        // 16 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 32 function s2n_stuffer_pem_read_contracts_harness
+        return_value_s2n_result_is_ok$0=s2n_result_is_ok(return_value_s2n_stuffer_validate$0);
+        // 17 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 32 function s2n_stuffer_pem_read_contracts_harness
+        ASSUME return_value_s2n_result_is_ok$0 != FALSE
+        // 18 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 34 function s2n_stuffer_pem_read_contracts_harness
+        void *result;
+        // 19 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 34 function s2n_stuffer_pem_read_contracts_harness
+        signed int return_value_s2n_stuffer_pem_read_contents;
+        // 20 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 34 function s2n_stuffer_pem_read_contracts_harness
+        return_value_s2n_stuffer_pem_read_contents=s2n_stuffer_pem_read_contents(pem, asn1);
+        // 21 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 34 function s2n_stuffer_pem_read_contracts_harness
+        result = (void *)return_value_s2n_stuffer_pem_read_contents;
+        // 22 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead result;
+        // 23 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_s2n_stuffer_pem_read_contents;
+        // 24 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_s2n_result_is_ok$0;
+        // 25 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_s2n_stuffer_validate$0;
+        // 26 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead asn1;
+        // 27 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_cbmc_allocate_s2n_stuffer$0;
+        // 28 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_s2n_result_is_ok;
+        // 29 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_s2n_stuffer_validate;
+        // 30 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead pem;
+        // 31 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        dead return_value_cbmc_allocate_s2n_stuffer;
+        // 32 file /local/home/lopha/Repos/s2n-tls/tests/cbmc/proofs/s2n_stuffer_pem_read_contracts/s2n_stuffer_pem_read_contracts_harness.c line 35 function s2n_stuffer_pem_read_contracts_harness
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+s2n_stuffer_validate /* s2n_stuffer_validate */
+        // 190 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+     1: IF stuffer != ((const struct s2n_stuffer *)NULL) THEN GOTO 3
+        // 191 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+     2: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32";
+        // 192 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        s2n_errno = 402653193;
+        // 193 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        s2n_calculate_stacktrace();
+        // 194 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 2
+        // 195 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 196 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        GOTO 20
+        // 197 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 2
+        // 198 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 32 function s2n_stuffer_validate
+     3: IF 0 != 0 THEN GOTO 1
+        // 199 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+     4: s2n_result return_value_s2n_blob_validate;
+        // 200 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        return_value_s2n_blob_validate=s2n_blob_validate(&stuffer->blob);
+        // 201 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        _Bool return_value_s2n_result_is_ok;
+        // 202 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        return_value_s2n_result_is_ok=s2n_result_is_ok(return_value_s2n_blob_validate);
+        // 203 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        IF return_value_s2n_result_is_ok != FALSE THEN GOTO 5
+        // 204 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 205 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        GOTO 20
+        // 206 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+     5: dead return_value_s2n_result_is_ok;
+        // 207 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        dead return_value_s2n_blob_validate;
+        // 208 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 33 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 4
+        // 209 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+     6: __CPROVER_bool tmp_if_expr;
+        // 210 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        IF stuffer->growable != 0u THEN GOTO 7
+        // 211 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        tmp_if_expr = TRUE;
+        // 212 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        GOTO 8
+        // 213 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+     7: tmp_if_expr = stuffer->alloced != 0u ? TRUE : FALSE;
+        // 214 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+     8: IF tmp_if_expr THEN GOTO 10
+        // 215 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+     9: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34";
+        // 216 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        s2n_errno = 402653194;
+        // 217 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        s2n_calculate_stacktrace();
+        // 218 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 9
+        // 219 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 220 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        GOTO 20
+        // 221 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 9
+        // 222 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+    10: dead tmp_if_expr;
+        // 223 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 34 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 6
+        // 224 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+    11: IF !((signed long int)(signed long int)!(!(!(stuffer->high_water_mark <= stuffer->blob.size))) != 0l) THEN GOTO 13
+        // 225 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+    12: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37";
+        // 226 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        s2n_errno = 402653194;
+        // 227 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        s2n_calculate_stacktrace();
+        // 228 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 12
+        // 229 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 230 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        GOTO 20
+        // 231 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 12
+        // 232 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 37 function s2n_stuffer_validate
+    13: IF 0 != 0 THEN GOTO 11
+        // 233 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+    14: IF !((signed long int)(signed long int)!(!(!(stuffer->write_cursor <= stuffer->high_water_mark))) != 0l) THEN GOTO 16
+        // 234 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+    15: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38";
+        // 235 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        s2n_errno = 402653194;
+        // 236 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        s2n_calculate_stacktrace();
+        // 237 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 15
+        // 238 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 239 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        GOTO 20
+        // 240 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 15
+        // 241 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 38 function s2n_stuffer_validate
+    16: IF 0 != 0 THEN GOTO 14
+        // 242 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+    17: IF !((signed long int)(signed long int)!(!(!(stuffer->read_cursor <= stuffer->write_cursor))) != 0l) THEN GOTO 19
+        // 243 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+    18: s2n_debug_str = "Error encountered in /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39";
+        // 244 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        s2n_errno = 402653194;
+        // 245 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        s2n_calculate_stacktrace();
+        // 246 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 18
+        // 247 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        return { .__error_signal=-1 };
+        // 248 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        GOTO 20
+        // 249 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+        IF 0 != 0 THEN GOTO 18
+        // 250 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 39 function s2n_stuffer_validate
+    19: IF 0 != 0 THEN GOTO 17
+        // 251 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 40 function s2n_stuffer_validate
+        return { .__error_signal=0 };
+        // 252 file /local/home/lopha/Repos/s2n-tls/stuffer/s2n_stuffer.c line 41 function s2n_stuffer_validate
+    20: END_FUNCTION
+

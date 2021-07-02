@@ -70,13 +70,16 @@ static int s2n_stuffer_pem_read_end(struct s2n_stuffer *pem, const char *keyword
     return s2n_stuffer_pem_read_encapsulation_line(pem, S2N_PEM_END_TOKEN, keyword);
 }
 
-static int s2n_stuffer_pem_read_contents(struct s2n_stuffer *pem, struct s2n_stuffer *asn1)
+int s2n_stuffer_pem_read_contents(struct s2n_stuffer *pem, struct s2n_stuffer *asn1)
 {
     s2n_stack_blob(base64__blob, 64, 64);
     struct s2n_stuffer base64_stuffer = {0};
     POSIX_GUARD(s2n_stuffer_init(&base64_stuffer, &base64__blob));
 
-    while (1) {
+    while (1) 
+    __CPROVER_loop_invariant(0 <= pem->read_cursor && pem->read_cursor <= pem->write_cursor)
+    __CPROVER_decreases(s2n_stuffer_data_available(pem))
+    {
         /* We need a byte... */
         POSIX_ENSURE(s2n_stuffer_data_available(pem) >= 1, S2N_ERR_STUFFER_OUT_OF_DATA);
 
